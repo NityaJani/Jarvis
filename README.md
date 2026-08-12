@@ -1,10 +1,7 @@
-# Intern
+# Jarvis
 
 A local, voice-controlled agent for macOS. Say a wake word, speak a command,
 and it drives real Mac apps by name to carry it out.
-
-(Internally the code/project directory is still named "jarvis" — that's just
-the codebase's internal name. The user-facing app is "Intern".)
 
 ## Pipeline
 
@@ -159,12 +156,12 @@ and restart it.
 
 ### Run
 
-**Menu-bar app (recommended)** — launch `Intern.app` from `/Applications`
-(Spotlight: "Intern"), then click "○ Intern" in the menu bar and check
-"Enable Intern":
+**Menu-bar app (recommended)** — launch `Jarvis.app` from `/Applications`
+(Spotlight: "Jarvis"), then click "○ Jarvis" in the menu bar and check
+"Enable Jarvis":
 
 ```bash
-open /Applications/Intern.app
+open /Applications/Jarvis.app
 ```
 
 Rebuild the app after changing code (alias mode — fast, references the venv
@@ -185,10 +182,10 @@ note below), wait for "Yes?", then speak your command, e.g.:
 - "Open TextEdit and write down: buy milk"
 - "Open Safari and go to the address bar"
 
-Note: the app is branded "Intern", but the spoken activation phrase is still
-"hey jarvis" — that's tied to openWakeWord's pretrained model file, not the
-app's name. Renaming it would require training a custom wake-word model
-(a multi-hour, multi-GB undertaking), which we decided to skip for now.
+Note: the spoken activation phrase is "hey jarvis" because that's tied to
+openWakeWord's pretrained model file — changing it would require training a
+custom wake-word model (a multi-hour, multi-GB undertaking), which we
+decided to skip for now.
 
 ## Safety notes
 
@@ -225,10 +222,10 @@ jarvis/
   browser.py        # Playwright-driven Chromium automation for web tasks
   tts.py            # spoken feedback via `say`
   main.py           # plain terminal loop entry point
-  tray_app.py       # menu-bar toggle UI entry point (rumps), class InternApp
-setup.py            # py2app build script -> dist/Intern.app
+  tray_app.py       # menu-bar toggle UI entry point (rumps), class JarvisApp
+setup.py            # py2app build script -> dist/Jarvis.app
 AppIcon.icns        # app icon source, referenced by setup.py
-Intern.app          # built app bundle (also copied to /Applications)
+Jarvis.app          # built app bundle (also copied to /Applications)
 jarvis_workspace/   # sandbox root for shell_tools + memory.py's MEMORY.md
 models/             # downloaded Whisper model weights
 logs/
