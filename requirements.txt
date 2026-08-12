@@ -1,0 +1,26 @@
+openai>=2.0.0
+python-dotenv>=1.0.1
+
+# Wake word detection (local, open source)
+openwakeword>=0.6.0
+sounddevice>=0.4.7
+numpy<2.0
+
+# Speech-to-text (local Whisper)
+faster-whisper>=1.0.3
+
+# macOS input control (keyboard) + Accessibility-API app control
+pyautogui>=0.9.54
+pyobjc-framework-Quartz>=10.3.1
+pyobjc-framework-ApplicationServices>=10.3.1
+
+# Menu-bar toggle UI
+rumps>=0.4.0
+
+# Hand-gesture screenshot cropping (webcam hand tracking + PNG clipboard copy)
+mediapipe>=0.10.21
+opencv-python>=4.11.0
+pillow>=12.3.0
+
+# Browser automation (run `python -m playwright install chromium` once after installing)
+playwright>=1.61.0

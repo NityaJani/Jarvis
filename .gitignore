@@ -1,0 +1,11 @@
+.env
+venv/
+models/
+build/
+dist/
+Jarvis.app/
+logs/
+__pycache__/
+*.pyc
+jarvis_workspace/
+.claude/
